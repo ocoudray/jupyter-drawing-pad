@@ -12,19 +12,19 @@ def _get_version(version_info):
 ########################################@
 # meta data
 
-__name__ = 'widget_d3_slider'
+__name__ = 'jupyter_drawing_pad'
 
 version_info = (0, 1, 0, 'alpha', 0)
 __version__ = _get_version(version_info)
 
-__description__ = 'd3 based slider Jupyter Widget - for demo'
+__description__ = 'drawing pad Jupyter Widget - for demo'
 __long_description__ = 'See repo README'
-__author__ = 'oscar6echo'
-__author_email__ = 'olivier.borderies@sgcib.com'
-__url__ = 'https://gitlab.com/oscar6echo/' + __name__
+__author__ = 'ocoudray'
+__author_email__ = 'olivier.coudray@polytechnique.edu'
+__url__ = 'https://github.com/ocoudray/jupyter-drawing-pad'
 __download_url__ = 'https://gitlab.com/oscar6echo/' + \
     __name__ + '/repository/archive.tar.gz?ref=' + __version__
-__keywords__ = ['jupyter-widget', 'd3']
+__keywords__ = ['jupyter-widget', 'drawing']
 __license__ = 'MIT'
 __classifiers__ = ['Development Status :: 4 - Beta',
                    'License :: OSI Approved :: MIT License',
@@ -34,9 +34,9 @@ __classifiers__ = ['Development Status :: 4 - Beta',
 __include_package_data__ = True
 __data_files__ = [
     ('share/jupyter/nbextensions/jupyter-drawing-pad', [
-        'widget_d3_slider/static/extension.js',
-        'widget_d3_slider/static/index.js',
-        'widget_d3_slider/static/index.js.map',
+        'jupyter-drawing-pad/static/extension.js',
+        'jupyter-drawing-pad/static/index.js',
+        'jupyter-drawing-pad/static/index.js.map',
     ]),
 ]
 __install_requires__ = ['ipywidgets>=7.0.0']

@@ -30,7 +30,8 @@ var DrawingModel = widgets.DOMWidgetModel.extend({
 		_view_module_version: '0.1.0',
 		value: 'Hello World',
 		data_x: [],
-		data_y : []
+		data_y : [],
+		time : []
 	})
 });
 
@@ -56,6 +57,7 @@ var DrawingView = widgets.DOMWidgetView.extend({
 		this.el.appendChild(this.settings_brush_size);
 
 		this.model.on('change:value', this.value_changed, this);
+		console.log(this.model);
 	},
 
 	value_changed: function () {

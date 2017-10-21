@@ -1,0 +1,16 @@
+Metadata-Version: 1.1
+Name: jupyter-drawing-pad
+Version: 0.1.0a0
+Summary: drawing pad Jupyter Widget - for demo
+Home-page: https://github.com/ocoudray/jupyter-drawing-pad
+Author: ocoudray
+Author-email: olivier.coudray@polytechnique.edu
+License: UNKNOWN
+Description-Content-Type: UNKNOWN
+Description: See repo README
+Keywords: jupyter-widget,drawing
+Platform: UNKNOWN
+Classifier: Development Status :: 4 - Beta
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Programming Language :: Python :: 3.5
+Classifier: Programming Language :: Python :: 3.6

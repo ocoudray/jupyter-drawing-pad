@@ -105,7 +105,7 @@ It takes place in a standard fashion:
 
 The full command is:
 ```bash
-$ jupyter nbextension (install|uninstall) --py [--symlink] --sys-prefix widget_d3_slider
+$ jupyter nbextension (install|uninstall) --py [--symlink] --sys-prefix jupyter_drawing_pad
 ```
 
 It copies [create symlinks] resp. removes `static/` files to resp. from the nbextension data folder `share/jupyter/nbextensions/jupyter-drawing-pad` and adds resp. removes lines in config file `notebook.json` in config directory `/usr/local/anaconda3/etc/jupyter`.
