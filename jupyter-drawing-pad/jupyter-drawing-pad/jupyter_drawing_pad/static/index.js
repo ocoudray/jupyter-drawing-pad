@@ -17356,9 +17356,9 @@ var create = function (that) {
 	//ctx.strokeStyle = document.settings.colour[1].value;
 
 	// Load lists
-	var x = that.model.get("data_x");
-	var y = that.model.get("data_y");
-	var t = that.model.get("time");
+	var x = that.model.get("data_x").slice();
+	var y = that.model.get("data_y").slice();
+	var t = that.model.get("time").slice();
 	window.x = x;
 	window.y = y;
 	window.t = t;
@@ -17373,7 +17373,7 @@ var create = function (that) {
 		canvas.removeEventListener('mousemove', onPaint, false);
 		// Set new lists in widget model
 		// Without line 56, changes can't be synchronized with python... strange... 
-		that.model.set({"data_x":[x], "data_y":[y], "time":[t] });
+		// that.model.set({"data_x":[], "data_y":[], "time":[] });
 		that.model.set({"data_x":x, "data_y":y, "time":t });
 		// sync with python
 		that.model.save_changes();
