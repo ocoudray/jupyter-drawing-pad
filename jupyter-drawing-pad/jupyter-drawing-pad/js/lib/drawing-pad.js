@@ -37,9 +37,9 @@ var create = function (that) {
 	//ctx.strokeStyle = document.settings.colour[1].value;
 
 	// Load lists
-	var x = that.model.get("data_x").slice();
-	var y = that.model.get("data_y").slice();
-	var t = that.model.get("time").slice();
+	var x = [];
+	var y = [];
+	var t = [];
 	window.x = x;
 	window.y = y;
 	window.t = t;
@@ -47,14 +47,15 @@ var create = function (that) {
 	canvas.addEventListener('mousedown', function(e) {
 		ctx.beginPath();
 		ctx.moveTo(mouse.x, mouse.y);
+		x = that.model.get("data_x").slice();
+		y = that.model.get("data_y").slice();
+		t = that.model.get("time").slice();
 		canvas.addEventListener('mousemove', onPaint, false);
 	}, false);
 	 
 	canvas.addEventListener('mouseup', function() {
 		canvas.removeEventListener('mousemove', onPaint, false);
 		// Set new lists in widget model
-		// Without line 56, changes can't be synchronized with python... strange... 
-		// that.model.set({"data_x":[], "data_y":[], "time":[] });
 		that.model.set({"data_x":x, "data_y":y, "time":t });
 		// sync with python
 		that.model.save_changes();
@@ -64,9 +65,9 @@ var create = function (that) {
 	var onPaint = function() {
 		console.log("Painting");
 		ctx.lineTo(mouse.x, mouse.y);
-		// that.model.attributes["data_x"].push(mouse.x);
 		x.push(mouse.x);
-		y.push(mouse.y);
+		// y (top -> bottom : 0->canvas.height)
+		y.push(canvas.height-mouse.y);
 		t.push(mouse.t);
 		ctx.stroke();
 	};
