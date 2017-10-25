@@ -2,7 +2,7 @@ require("./style.css")
 
 var create = function (that) {
 	var canvas = that.canvas;
-	var ctx = canvas.getContext('2d');
+	var ctx = that.ctx;
 	window.ctx = ctx;
 	window.canvas = canvas;
 	 
@@ -13,7 +13,6 @@ var create = function (that) {
 	
 	var mouse = {x: 0, y: 0, t:0};
 	window.that = that;
-
 
 	
 	/* Mouse Capturing Work */
@@ -27,6 +26,7 @@ var create = function (that) {
 	/* Drawing on Paint App */
 	ctx.lineJoin = 'round';
 	ctx.lineCap = 'round';
+	ctx.lineWidth = 1;
 	
 	ctx.strokeStyle = "red";
 	function getColor(colour){ctx.strokeStyle = colour;}

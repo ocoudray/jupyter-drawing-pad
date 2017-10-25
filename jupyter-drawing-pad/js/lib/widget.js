@@ -39,10 +39,10 @@ var DrawingModel = widgets.DOMWidgetModel.extend({
 // Custom View. Renders the widget model.
 var DrawingView = widgets.DOMWidgetView.extend({
 	render: function () {
-		this.value_changed();
 		console.log("Creating html");
 		this.sketch = document.createElement("div");
 		this.canvas = document.createElement("canvas");
+		this.ctx = this.canvas.getContext('2d');
 		this.canvas.setAttribute("class", "drawing-pad-paint");
 		this.settings_colours = document.createElement("div");
 		this.settings_colours.setAttribute("class", "drawing-pad-settings");
@@ -55,13 +55,37 @@ var DrawingView = widgets.DOMWidgetView.extend({
 		this.el.appendChild(this.sketch)
 		this.el.appendChild(this.settings_colours);
 		this.el.appendChild(this.settings_brush_size);
-
-		this.model.on('change:value', this.value_changed, this);
+		this.value_changed();
+		this.model.on('change:data_x', this.value_changed, this);
+		// this.model.on('change:data_y', this.value_changed, this);
 		console.log(this.model);
 	},
 
 	value_changed: function () {
-		this.el.textContent = this.model.get('value');
+		// this.el.textContent = this.model.get('value');
+		this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
+		var x = this.model.get('data_x');
+		var y = this.model.get('data_y');
+		var t = this.model.get('time');
+		this.ctx.beginPath();
+
+		if (x.length<1 || y.length<1 || x.length != y.length)
+		{
+			// alert("erreur")
+			return;
+		}
+		this.ctx.moveTo(x[0], this.canvas.height - y[0]);
+		for (var k=1 ; k<x.length ; k++){
+			if (t[k]-t[k-1]<100){
+				this.ctx.lineTo(x[k], this.canvas.height-y[k]);
+				this.ctx.stroke();
+			}
+			else{
+				this.ctx.moveTo(x[k], this.canvas.height-y[k]);
+			}
+		}
+		
+
 	}
 });
 
