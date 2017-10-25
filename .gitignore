@@ -8,16 +8,15 @@ build/
 .vs_code/
 js/lib/block/*
 
-*/*/node_modules/
+node_modules/
 
-*/*/static/
-js/dist/
+static/
 
 .DS_Store
 
 *.old*
 
-*/*/package-lock.json
+**/package-lock.json
 
 nb/*.html
 nb/*.sh

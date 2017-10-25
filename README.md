@@ -6,8 +6,8 @@ Before install, create a conda env with jupyter installed in it (for ex. from th
 
 Regular install:
 
-    $ pip install widget_d3_slider
-    $ jupyter nbextension enable --py --sys-prefix widget_d3_slider
+    $ pip install jupyter_drawing_pad
+    $ jupyter nbextension enable --py --sys-prefix jupyter_drawing_pad
 
 
 Dev install - requires npm:
@@ -17,8 +17,8 @@ Dev install - requires npm:
     $ npm install
     $ cd ..
     $ pip install -e .
-    $ jupyter nbextension install --py --symlink --sys-prefix widget_d3_slider
-    $ jupyter nbextension enable --py --sys-prefix widget_d3_slider
+    $ jupyter nbextension install --py --symlink --sys-prefix jupyter_drawing_pad
+    $ jupyter nbextension enable --py --sys-prefix jupyter_drawing_pad
 
 
 ## 2 - Paths
