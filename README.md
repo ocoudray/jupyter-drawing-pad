@@ -2,6 +2,8 @@
 
 ## 1 - Installation
 
+Before install, create a conda env with jupyter installed in it (for ex. from the env.yml file). See below (point 4) for more info about conda + jupyter.
+
 Regular install:
 
     $ pip install widget_d3_slider
