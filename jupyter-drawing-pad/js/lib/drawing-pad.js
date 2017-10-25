@@ -37,6 +37,7 @@ var create = function (that) {
 	//ctx.strokeStyle = document.settings.colour[1].value;
 
 	// Load lists
+	var data = [];
 	var x = [];
 	var y = [];
 	var t = [];
@@ -47,16 +48,17 @@ var create = function (that) {
 	canvas.addEventListener('mousedown', function(e) {
 		ctx.beginPath();
 		ctx.moveTo(mouse.x, mouse.y);
-		x = that.model.get("data_x").slice();
-		y = that.model.get("data_y").slice();
-		t = that.model.get("time").slice();
+		data = that.model.get("data").slice();
+		x = data[0].slice();
+		y = data[1].slice();
+		t = data[2].slice();
 		canvas.addEventListener('mousemove', onPaint, false);
 	}, false);
 	 
 	canvas.addEventListener('mouseup', function() {
 		canvas.removeEventListener('mousemove', onPaint, false);
 		// Set new lists in widget model
-		that.model.set({"data_x":x, "data_y":y, "time":t });
+		that.model.set({"data":[x,y,t]});
 		// sync with python
 		that.model.save_changes();
 		console.log("Save changes")

@@ -29,9 +29,10 @@ var DrawingModel = widgets.DOMWidgetModel.extend({
 		_model_module_version: '0.1.0',
 		_view_module_version: '0.1.0',
 		value: 'Hello World',
-		data_x: [],
-		data_y : [],
-		time : []
+		// data_x: [],
+		// data_y : [],
+		// time : [],
+		data : []
 	})
 });
 
@@ -56,17 +57,16 @@ var DrawingView = widgets.DOMWidgetView.extend({
 		this.el.appendChild(this.settings_colours);
 		this.el.appendChild(this.settings_brush_size);
 		this.value_changed();
-		this.model.on('change:data_x', this.value_changed, this);
-		// this.model.on('change:data_y', this.value_changed, this);
+		this.model.on('change:data', this.value_changed, this);
 		console.log(this.model);
 	},
 
 	value_changed: function () {
-		// this.el.textContent = this.model.get('value');
 		this.ctx.clearRect(0, 0, this.canvas.width, this.canvas.height);
-		var x = this.model.get('data_x');
-		var y = this.model.get('data_y');
-		var t = this.model.get('time');
+		var data = this.model.get('data');
+		var x = data[0];
+		var y = data[1];
+		var t = data[2];
 		this.ctx.beginPath();
 
 		if (x.length<1 || y.length<1 || x.length != y.length)
