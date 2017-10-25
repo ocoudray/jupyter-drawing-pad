@@ -2,6 +2,7 @@ from .example import DrawingPad
 from ipywidgets import HBox, VBox, Button
 from IPython import display
 
+
 class CustomBox(HBox):
     def __init__(self):
         drawing_pad = DrawingPad()
