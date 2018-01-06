@@ -1,5 +1,3 @@
-from .__meta__ import version_info, __version__
-
 from .example import *
 from .widget import *
 

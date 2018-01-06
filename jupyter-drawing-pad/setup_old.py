@@ -66,8 +66,8 @@ class NPM(Command):
     node_modules = os.path.join(node_root, 'node_modules')
 
     targets = [
-        os.path.join(here, 'widget_d3_slider', 'static', 'extension.js'),
-        os.path.join(here, 'widget_d3_slider', 'static', 'index.js')
+        os.path.join(here, 'jupyter_drawing_pad', 'static', 'extension.js'),
+        os.path.join(here, 'jupyter_drawing_pad', 'static', 'index.js')
     ]
 
     def initialize_options(self):
@@ -121,20 +121,20 @@ class NPM(Command):
         update_package_data(self.distribution)
 
 version_ns = {}
-with open(os.path.join(here, 'widget_d3_slider', '_version.py')) as f:
+with open(os.path.join(here, 'jupyter_drawing_pad', '_version.py')) as f:
     exec(f.read(), {}, version_ns)
 
 setup_args = {
-    'name': 'widget_d3_slider',
+    'name': 'jupyter_drawing_pad',
     'version': version_ns['__version__'],
     'description': 'A Custom Jupyter Widget Library',
     'long_description': LONG_DESCRIPTION,
     'include_package_data': True,
     'data_files': [
-        ('share/jupyter/nbextensions/jupyter-widget-d3-slider', [
-            'widget_d3_slider/static/extension.js',
-            'widget_d3_slider/static/index.js',
-            'widget_d3_slider/static/index.js.map',
+        ('share/jupyter/nbextensions/jupyter-drawing-pad', [
+            'jupyter_drawing_pad/static/extension.js',
+            'jupyter_drawing_pad/static/index.js',
+            'jupyter_drawing_pad/static/index.js.map',
         ]),
     ],
     'install_requires': [
@@ -149,9 +149,9 @@ setup_args = {
         'jsdeps': NPM,
     },
 
-    'author': 'oscar6echo',
-    'author_email': 'olivier.borderies@gmail.com',
-    'url': 'https://github.com/oscar6echo/jupyter-widget-d3-slider',
+    'author': 'ocoudray',
+    'author_email': 'coudray.olivier@free.fr',
+    'url': 'https://github.com/ocoudray/jupyter-drawing-pad.git',
     'keywords': [
         'ipython',
         'jupyter',
