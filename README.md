@@ -1,5 +1,7 @@
 # jupyter-drawing-pad
 
+[![Binder](https://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/PierreMarion23/jupyter-widget-drawing-pad-binder/master)
+
 ## 1 - Overview
 
 This is a simple widget inspired by a drawing pad (see [this example](https://codepen.io/anon/pen/aLYeNB)). Thanks to this widget, you can draw in a box whatever you want (for instance a signature). The coordinates of the points of the trajectory is synchronised with the Python kernel.
