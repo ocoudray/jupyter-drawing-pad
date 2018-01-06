@@ -22,7 +22,7 @@ log.set_verbosity(log.DEBUG)
 log.info('setup.py entered')
 log.info('$PATH=%s' % os.environ['PATH'])
 
-LONG_DESCRIPTION = 'This is a jupyter widget (or ipywidget) wrapping the very convenient pivotTable.js library.'
+LONG_DESCRIPTION = 'This is a jupyter-widget consisting in a drawing pad'
 
 def js_prerelease(command, strict=False):
     """decorator for building minified js/css prior to another command"""
@@ -127,7 +127,7 @@ with open(os.path.join(here, 'jupyter_drawing_pad', '_version.py')) as f:
 setup_args = {
     'name': 'jupyter_drawing_pad',
     'version': version_ns['__version__'],
-    'description': 'This is a jupyter widget (or ipywidget) wrapping the very convenient pivotTable.js library.',
+    'description': 'This is a jupyter widget (or ipywidget) consisting in a drawing pad.',
     'long_description': LONG_DESCRIPTION,
     'include_package_data': True,
     'data_files': [
@@ -150,9 +150,9 @@ setup_args = {
         'jsdeps': NPM,
     },
 
-    'author': 'PierreMarion23',
-    'author_email': 'pierre23.marion@free.fr',
-    'url': 'https://github.com/PierreMarion23/pivot-table-widget',
+    'author': 'ocoudray',
+    'author_email': 'coudray.olivier@free.fr',
+    'url': 'https://github.com/ocoudray/pivot-table-widget',
     'keywords': [
         'ipython',
         'jupyter',

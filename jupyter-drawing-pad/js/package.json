@@ -2,12 +2,12 @@
   "name": "jupyter-drawing-pad",
   "version": "0.1.6",
   "description": "A Custom Jupyter Widget Library",
-  "author": "oscar6echo",
+  "author": "ocoudray",
   "license": "MIT",
   "main": "lib/index.js",
   "repository": {
     "type": "git",
-    "url": "https://gitlab.com/oscar6echo/jupyter-drawing-pad.git"
+    "url": "https://gitlab.com/ocoudray/jupyter-drawing-pad.git"
   },
   "keywords": [
     "jupyter",
