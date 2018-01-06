@@ -2,7 +2,7 @@
 
 ## 1 - Overview
 
-This is a simple widget inspired by a drawing pad (see [this example](https://ipywidgets.readthedocs.io/en/stable/)). Thanks to this widget, you can draw in a box whatever you want (for instance a signature). The coordinates of the points of the trajectory is synchronised with the Python kernel.
+This is a simple widget inspired by a drawing pad (see [this example](https://codepen.io/anon/pen/aLYeNB)). Thanks to this widget, you can draw in a box whatever you want (for instance a signature). The coordinates of the points of the trajectory is synchronised with the Python kernel.
 
 You'll find some additional functionalities :
 + a `Save` button with a text field in order to save your signature along with your name
@@ -11,7 +11,7 @@ You'll find some additional functionalities :
 
 When you try to login, the comparison between the signature to the registered one takes into account not only the spatial coordinates but also time.
 
-To get a feel of the result check out the [demo notebook]().
+To get a feel of the result check out the [demo notebook](https://github.com/ocoudray/jupyter-drawing-pad/blob/master/Example/Demo_drawing_pad.ipynb).
 
 
 ## 2 - Installation
@@ -22,6 +22,6 @@ As such the installation requires 2 step:
     $ pip install jupyter_widget_pivot_table
     $ jupyter nbextension enable --py --sys-prefix jupyter_widget_pivot_table
 
-For more info, see the [Install Guide]().
+For more info, see the [Install Guide](https://github.com/ocoudray/jupyter-drawing-pad/blob/master/doc/install_guide.md).
 
 
