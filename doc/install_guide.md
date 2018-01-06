@@ -159,6 +159,8 @@ It will run in the background and trigger `npm run prepare` each time any change
 
 ## 4 - Publish on PyPI 
 
+A few comments on the release process are available in the [RELEASE.md](https://github.com/ocoudray/jupyter-drawing-pad/blob/master/jupyter-drawing-pad/RELEASE.md) file. Below is our experience on the matter of publishing on PyPI:
+
 In order to publish a first version of your widget on PyPI:
 + Create an account on [PyPI](https://pypi.python.org/pypi?%3Aaction=register_form)
 + `pip install twine` (if not already installed)
