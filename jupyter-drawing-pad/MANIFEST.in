@@ -1,1 +1,13 @@
-# recursive-include jupyter_drawing_pad/static *.*
+
+# js
+recursive-include ipypivot/static *.*
+
+# subfolders
+recursive-include ipypivot/api *.json
+recursive-include ipypivot/data *.csv
+recursive-include ipypivot/markdown *.md
+
+# Misc
+include requirements.txt
+include LICENSE
+global-exclude *.py[co]
