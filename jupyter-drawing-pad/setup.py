@@ -62,6 +62,10 @@ data_files = [
         'jupyter_drawing_pad/static/index.js',
         'jupyter_drawing_pad/static/index.js.map',
     ]),
+    ('etc/jupyter/nbconfig/notebook.d', [
+        'enable_drawing_pad.json'
+    ])
+
 ]
 install_requires = install_requires
 zip_safe = False
