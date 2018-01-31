@@ -18,12 +18,7 @@ To get a feel of the result check out the [demo notebook](https://github.com/oco
 
 ## 2 - Installation
 
-An ipywidget is a Python package with some associated javascript files.
-As such the installation requires 2 step:
+    $ pip install jupyter_drawing_pad
 
-    $ pip install jupyter_widget_pivot_table
-    $ jupyter nbextension enable --py --sys-prefix jupyter_widget_pivot_table
-
-For more info, see the [Install Guide](https://github.com/ocoudray/jupyter-drawing-pad/blob/master/doc/install_guide.md).
-
+For more info about jupyter widgets (installation process, packaging and publishing), see [this tutorial repo](https://github.com/ocoudray/first-widget). All what's written there is also true for this package, just changing the name `first-widget` into `jupyter-drawing-pad`.
 
