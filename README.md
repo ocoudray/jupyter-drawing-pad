@@ -16,9 +16,14 @@ When you try to login, the comparison between the signature to the registered on
 To get a feel of the result check out the [demo notebook](https://github.com/ocoudray/jupyter-drawing-pad/blob/master/Example/Demo_drawing_pad.ipynb).
 
 
-## 2 - Installation
+The official documentation describes a [Hello World](https://ipywidgets.readthedocs.io/en/stable/examples/Widget%20Custom.html) widget and also points to several very [advanced widgets](http://jupyter.org/widgets.html) from [bqplot](https://github.com/bloomberg/bqplot) to [ipyvolume](https://github.com/maartenbreddels/ipyvolume).  
+But there is a large gap between these 2 stages.  
 
-    $ pip install jupyter_drawing_pad
+This simple widget may serve as a template for intermediate users who feel the (huge) potential of this library, want to build one, but cannot find examples relevant to their level i.e. past absolute beginner.
 
 For more info about jupyter widgets (installation process, packaging and publishing), see [this tutorial repo](https://github.com/ocoudray/first-widget). All what's written there is also true for this package, just changing the name `first-widget` into `jupyter-drawing-pad`.
 
+
+## 2 - Installation
+
+    $ pip install jupyter_drawing_pad
